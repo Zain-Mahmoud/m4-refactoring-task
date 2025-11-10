@@ -1,3 +1,6 @@
+7f93297 Task 2.3
+6d2b47c Task 2.3
+44ab68f Task 2.2
 a2ba0d7 Task 2.1
 50ddfd7 Task 2.1
 87cd39f completed Task 1.2
