@@ -47,7 +47,7 @@ public class StatementPrinter {
     private int getTotalVolumeCredits() {
         int volumeCredits = 0;
         for (Performance performance : getInvoice().getPerformances()) {
-            volumeCredits += getTotalVolumeCredits(performance);
+            volumeCredits += getVolumeCredits(performance);
 
         }
         return volumeCredits;
@@ -57,7 +57,7 @@ public class StatementPrinter {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
 
-    private int getTotalVolumeCredits(Performance performance) {
+    private int getVolumeCredits(Performance performance) {
         // add volume credits
         int result = 0;
         result += Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
